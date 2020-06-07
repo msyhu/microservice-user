@@ -4,10 +4,9 @@ server:
 spring:
   application:
     name: user
-#  cloud:
-#    config:
-#      uri: http://${configServerIp}:${configServerPort}/config/
-#      fail-fast: true
+  cloud:
+    config:
+      uri: http://localhost:8888
   profiles:
     active: ${activatedProperties}
 encrypt:

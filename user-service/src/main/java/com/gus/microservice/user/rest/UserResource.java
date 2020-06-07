@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2019. 4. 4.
  */
 @RestController
-@RequestMapping( value = "/user" )
+@RequestMapping
 public class UserResource {
 
 	public final UserService userService;
