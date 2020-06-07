@@ -42,10 +42,16 @@
 			<version>2.2.2.RELEASE</version>
         </dependency>
 
+		<!--		<dependency>-->
+		<!--            <groupId>com.h2database</groupId>-->
+		<!--            <artifactId>h2</artifactId>-->
+		<!--        </dependency>-->
+
 		<dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<!-- 			<scope>runtime</scope> -->
+		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>

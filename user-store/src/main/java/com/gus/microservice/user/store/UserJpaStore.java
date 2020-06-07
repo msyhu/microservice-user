@@ -50,12 +50,12 @@ public class UserJpaStore implements UserStore {
 		return repository.findById(id).get().toDomain();
 	}
 	
-	@PostConstruct
-	public void init() {
-		for(int i = 0; i<10; i++) {
-			repository.save(new UserJpo(User.getSample()));
-		}
-	}
+//	@PostConstruct
+//	public void init() {
+//		for(int i = 0; i<10; i++) {
+//			repository.save(new UserJpo(User.getSample()));
+//		}
+//	}
 
 	@Override
 	public List<User> retrieveAll() {

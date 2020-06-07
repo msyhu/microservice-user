@@ -22,8 +22,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -39,10 +38,14 @@ import java.util.stream.StreamSupport;
 @Setter
 @NoArgsConstructor
 @Entity
+@Table(name="user")
 public class UserJpo {
     
 	@Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
+    @Column(name = "NAME")
 	private String name;
 
     public UserJpo( User entity ) {
