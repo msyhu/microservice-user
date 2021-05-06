@@ -4,11 +4,11 @@ server:
 spring:
   application:
     name: user
-  cloud:
-    config:
-      uri: http://localhost:8888
-  profiles:
-    active: ${activatedProperties}
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#  profiles:
+#    active: ${activatedProperties}
 encrypt:
   failOnError: false
 

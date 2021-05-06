@@ -16,6 +16,7 @@
  *==================================================================================*/
 package com.gus.microservice.user.domain.lifecycle;
 
+import com.gus.microservice.user.domain.spec.GobbyIsntFreeService;
 import com.gus.microservice.user.domain.spec.UserService;
 
 /*
@@ -29,4 +30,5 @@ import com.gus.microservice.user.domain.spec.UserService;
 
 public interface ServiceLifecycle {
 	 UserService requestUserService();
+	 GobbyIsntFreeService requestGobbyIsntFreeService();
 }

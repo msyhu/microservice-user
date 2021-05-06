@@ -18,6 +18,7 @@
 package com.gus.microservice.user.lifecycle;
 
 import com.gus.microservice.user.domain.lifecycle.ServiceLifecycle;
+import com.gus.microservice.user.domain.spec.GobbyIsntFreeService;
 import com.gus.microservice.user.domain.spec.UserService;
 import org.springframework.stereotype.Component;
 
@@ -32,12 +33,20 @@ import org.springframework.stereotype.Component;
 public class ServiceLifecycler implements ServiceLifecycle {
     
 	private final UserService userService;
+	private final GobbyIsntFreeService gobbyIsntFreeService;
 	
-	public ServiceLifecycler(UserService userService){
+	public ServiceLifecycler(UserService userService, GobbyIsntFreeService gobbyIsntFreeService){
+
 		this.userService = userService;
+		this.gobbyIsntFreeService = gobbyIsntFreeService;
 	}
 	
 	public UserService requestUserService(){
 		return this.userService;
+	}
+
+	@Override
+	public GobbyIsntFreeService requestGobbyIsntFreeService() {
+		return this.gobbyIsntFreeService;
 	}
 }
